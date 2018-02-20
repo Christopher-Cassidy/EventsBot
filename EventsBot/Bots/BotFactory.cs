@@ -7,8 +7,12 @@ namespace EventsBot.Bots
 {
     public class BotFactory
     {
-        public static IBot Create(int id) {
-            return new EventBot(id);
+        public static IBot Create(string botName, int botId) {
+            switch (botName.ToLower()) {
+                case "events":
+                    return new EventBot(botId);
+                default: throw new Exception("Bot not found");
+            }
         }
     }
 }

@@ -10,8 +10,8 @@ namespace EventsBot.Models
     {
         public static List<CompanyEvent> Events { get; private set; }
 
-        private static Fixture _fixture = new Fixture();
-
+        private static Fixture _fixture = AutoFixtureHelper.CreateCustomFixture();
+        
         static CompanyEventsDataContext()
         {
             Events = _fixture.CreateMany<CompanyEvent>(5).ToList();

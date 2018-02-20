@@ -25,6 +25,8 @@ namespace EventsBot.Models
     public class EventRegistration
     {
         public Uri Url { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public List<EventRegistrationCategory> Categories { get; set; }
     }
 

@@ -24,6 +24,17 @@ namespace EventsBot
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            // Hard-coded for the win!
+            services.AddAuthentication(o =>
+                {
+                    o.DefaultAuthenticateScheme = "Basic";
+                    o.DefaultChallengeScheme = "Basic";
+                })
+            .AddBasicAuthentication(credentials =>
+                Task.FromResult(
+                    credentials.username == "EventsBot"
+                    && credentials.password == "Wombot14!"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +45,7 @@ namespace EventsBot
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

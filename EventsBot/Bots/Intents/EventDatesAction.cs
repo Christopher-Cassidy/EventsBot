@@ -23,5 +23,20 @@ namespace EventsBot.Bots
                     return $"The {_companyEvent.Name} event is from {_companyEvent.StartDate.ToShortDateString()} to {_companyEvent.EndDate.ToShortDateString()}.";
             }
         }
+
+        protected override string GetSpeech()
+        {
+            switch (_dateType.ToLower())
+            {
+                case "start":
+                    return $"The {_companyEvent.Name} event starts on {_companyEvent.StartDate.ToString("dddd, dd MMMM yyyy")}.";
+
+                case "end":
+                    return $"The {_companyEvent.Name} event ends on {_companyEvent.EndDate.ToString("dddd, dd MMMM yyyy")}.";
+
+                default:
+                    return $"The {_companyEvent.Name} event is from {_companyEvent.StartDate.ToString("dddd, dd MMMM")} to {_companyEvent.EndDate.ToString("dddd, dd MMMM yyyy")}.";
+            }
+        }
     }
 }
