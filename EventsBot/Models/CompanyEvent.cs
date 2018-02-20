@@ -63,14 +63,14 @@ namespace EventsBot.Models
     }
 
     public enum TransportationType {
-        Walking,
-        Cycling,
-        Boat,
         Car,
         Train,
         Subway,
         Tram,
-        Bus
+        Bus,
+        Walking,
+        Cycling,
+        Boat,
     }
 
     public class Transportation {

@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsBot", "EventsBot\EventsBot.csproj", "{E4601C1D-2E12-43DC-A9FD-BA0FBB033692}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DialogFlow Backups", "DialogFlow Backups", "{674A1E51-7990-46EC-B00D-590AF8406605}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\Wombot_20180220.zip = ..\..\..\Downloads\Wombot_20180220.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
